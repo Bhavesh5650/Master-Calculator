@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context=".AgeCalculatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ageBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/back_button_shape">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Age Calculator"
+            android:textAlignment="center"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/second_black"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="35dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="Birth Date"
+                android:textColor="@color/second_black"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/value_enter_shape">
+
+                <EditText
+                    android:id="@+id/birthDateAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:hint="Date"
+                    android:backgroundTint="@color/background_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="Birth Month"
+                android:textColor="@color/second_black"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/value_enter_shape">
+
+                <EditText
+                    android:id="@+id/birthMonthAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:hint="Month"
+                    android:backgroundTint="@color/background_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="Birth Year"
+                android:textColor="@color/second_black"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/value_enter_shape">
+
+                <EditText
+                    android:id="@+id/birthYearAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:hint="Year"
+                    android:backgroundTint="@color/background_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ageCalculateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:elevation="25dp"
+        android:background="@drawable/calculate_button">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:letterSpacing="0.02"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/second_black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:text="Result"/>
+
+            <TextView
+                android:id="@+id/resultAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:backgroundTint="@color/background_color"
+                android:hint="---"
+                android:textColorHint="@color/second_black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
