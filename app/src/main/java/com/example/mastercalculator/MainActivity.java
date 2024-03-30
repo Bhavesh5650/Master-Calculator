@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout aboutUsBtn=findViewById(R.id.aboutUsBtn);
         LinearLayout startAppBtn=findViewById(R.id.startAppBtn);
+        LinearLayout mainShareBtn=findViewById(R.id.mainShareBtn);
 
         //Clicking
 
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(MainActivity.this,AllCalculationActivity.class);
                 startActivity(intent);
+            }
+        });
+        mainShareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent shareIntent= new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                startActivity(Intent.createChooser(shareIntent,"Choose One"));
             }
         });
     }

@@ -202,7 +202,7 @@
                 android:id="@+id/resultAge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:backgroundTint="@color/background_color"
                 android:hint="---"
                 android:textColorHint="@color/second_black" />

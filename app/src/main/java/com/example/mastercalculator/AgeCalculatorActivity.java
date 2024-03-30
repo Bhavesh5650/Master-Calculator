@@ -1,26 +1,22 @@
 package com.example.mastercalculator;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
 
-import androidx.activity.EdgeToEdge;
+import java.lang.reflect.Method;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class AgeCalculatorActivity extends AppCompatActivity {
 
     EditText birthDateAge;
     EditText birthMonthAge;
     EditText birthYearAge;
+
+    TextView resultAge;
 
 
     @Override
@@ -35,7 +31,7 @@ public class AgeCalculatorActivity extends AppCompatActivity {
         birthMonthAge=findViewById(R.id.birthMonthAge);
         birthYearAge=findViewById(R.id.birthYearAge);
         LinearLayout ageCalculateBtn=findViewById(R.id.ageCalculateBtn);
-        TextView resultAge=findViewById(R.id.resultAge);
+        resultAge=findViewById(R.id.resultAge);
 
 
         //Clicking
@@ -75,19 +71,20 @@ public class AgeCalculatorActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent=getIntent();
+//        Intent intent=getIntent();
 
     }
 
-    int c_date=30,c_month=3,c_year=2024;
-    int b_date=Integer.parseInt(String.valueOf(birthDateAge));
-    int b_month=Integer.parseInt(String.valueOf(birthMonthAge));
-    int b_year=Integer.parseInt(String.valueOf(birthYearAge));
-
-    int date,month,year;
 
     void count()
     {
+        int c_date=30,c_month=3,c_year=2024;
+        int b_date=Integer.parseInt(birthDateAge.getText().toString());
+        int b_month=Integer.parseInt(birthMonthAge.getText().toString());
+        int b_year=Integer.parseInt(birthYearAge.getText().toString());
+
+        int date,month,year;
+
         year=c_year-b_year;
 
         if(c_date>b_date && c_month>b_month)
@@ -119,7 +116,8 @@ public class AgeCalculatorActivity extends AppCompatActivity {
             }
         }
 
-        System.out.println("You Are"+year+"Year Old !");
+        resultAge.setText("Your Age Is "+year);
+
     }
 
 }
