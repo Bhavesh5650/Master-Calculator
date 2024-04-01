@@ -1,3 +1,3 @@
 # Master Calculator
 
-# Out Put
+# Output
